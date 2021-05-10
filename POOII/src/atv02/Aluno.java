@@ -77,5 +77,4 @@ public class Aluno extends Pessoa {
 		builder.append("]");
 		return builder.toString();
 	}
-	
 }
