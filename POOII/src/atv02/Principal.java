@@ -14,7 +14,7 @@ public class Principal {
 		Aluno a1 = new Aluno();
 		Aluno a2 = new Aluno();
 	
-
+		
 	}
 
 }
