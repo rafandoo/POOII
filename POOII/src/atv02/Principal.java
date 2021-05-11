@@ -9,14 +9,11 @@ package atv02;
  */
 public class Principal {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		
-		System.out.println("teste");
-		System.out.println("teste!!!!!");
-
+		Aluno a1 = new Aluno();
+		Aluno a2 = new Aluno();
+	
 
 	}
 

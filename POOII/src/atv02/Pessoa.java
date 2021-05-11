@@ -1,6 +1,5 @@
 package atv02;
 
-import java.security.NoSuchAlgorithmException;
 
 public class Pessoa {
 	
@@ -11,7 +10,7 @@ public class Pessoa {
 		
 	}
 	
-	public Pessoa(String nome) throws NoSuchAlgorithmException {
+	public Pessoa(String nome) {
 		setNome(nome);
 	}
 
@@ -21,7 +20,17 @@ public class Pessoa {
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		if (nome.length() > 0)
+			this.nome = nome;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Pessoa [nome=");
+		builder.append(nome);
+		builder.append("]");
+		return builder.toString();
 	}
 	
 }

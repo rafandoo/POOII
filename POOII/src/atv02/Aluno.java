@@ -1,32 +1,27 @@
 package atv02;
 
-import java.security.NoSuchAlgorithmException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class Aluno extends Pessoa {
 	
 	private String matricula;
 	private String cpf;
+	private String dataNascimento;
 	private String email;
-	
-	SimpleDateFormat dataC = new SimpleDateFormat("dd/MM/yyyy");
-	Calendar dataN = new GregorianCalendar();
 	
 	
 	public Aluno() {
 		
 	}
 	
-	public Aluno(String nome, String matricula, String cpf, String email) throws NoSuchAlgorithmException {
+	public Aluno(String nome, String matricula, String cpf, String dataNascimento, String email) {
 		super(nome);
 		setMatricula(matricula);
 		setCpf(cpf);
+		setDataNascimento(dataNascimento);
 		setEmail(email);
 	}
 	
-	public Aluno(String nome) throws NoSuchAlgorithmException {
+	public Aluno(String nome) {
 		super(nome);
 	}
 	
@@ -48,6 +43,15 @@ public class Aluno extends Pessoa {
 		if (cpf.length() > 0)
 			this.cpf = cpf;
 	}
+	
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+	
+	public void setDataNascimento(String dataNascimento) {
+		if (dataNascimento.length() > 0)
+			this.dataNascimento = dataNascimento;
+	}
 
 	public String getEmail() {
 		return email;
@@ -59,10 +63,6 @@ public class Aluno extends Pessoa {
 	}
 
 
-	public void dataNasci(int ano, int mes, int dia) {
-		dataN.set(ano, (mes - 1), dia);
-	}
-
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -73,7 +73,7 @@ public class Aluno extends Pessoa {
 		builder.append(", email=");
 		builder.append(email);
 		builder.append("\n- Data de Nascimento: ");
-		builder.append(dataC.format(dataN.getTime()));
+		builder.append(dataNascimento);
 		builder.append("]");
 		return builder.toString();
 	}
