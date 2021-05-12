@@ -65,15 +65,14 @@ public class Aluno extends Pessoa {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Aluno [matricula=");
+		builder.append("\n- Matrícula: ");
 		builder.append(matricula);
-		builder.append(", cpf=");
+		builder.append("\n- CPF: ");
 		builder.append(cpf);
-		builder.append(", email=");
-		builder.append(email);
 		builder.append("\n- Data de Nascimento: ");
 		builder.append(dataNascimento);
-		builder.append("]");
+		builder.append("\n- E-mail: ");
+		builder.append(email);
 		return builder.toString();
 	}
 }

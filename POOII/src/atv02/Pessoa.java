@@ -27,9 +27,8 @@ public class Pessoa {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Pessoa [nome=");
+		builder.append("\n- Nome: ");
 		builder.append(nome);
-		builder.append("]");
 		return builder.toString();
 	}
 }
